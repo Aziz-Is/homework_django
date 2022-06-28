@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> To Do's: </h1>
+{% for i in todos %}
+
+ <h2> Описание - {{i.description}} </h2>
+ <h2> Статус - {{i.status}} </h2>
+ <h2> Сделать до - {{i.deadline}} </h2>
+
+{% endfor %}
+</body>
+</html>

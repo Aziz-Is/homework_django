@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" method="post">
+{% csrf_token %}
+<label>
+    Description
+</label>
+<input type="text" name="description"> <br>
+    <label>
+    Status
+</label>
+<select id="status" name="status" size="3" multiple>
+    <option value="new">New</option>
+    <option value="in_progress">In progress</option>
+    <option value="done">Done</option>
+    </select>
+
+    <br>
+    <label>
+    Deadline
+</label>
+<input type="date" name="deadline"> <br>
+    <input type="submit">
+
+</form>
+</body>
+</html>
