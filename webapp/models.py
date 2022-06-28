@@ -6,10 +6,11 @@ class ToDo(models.Model):
                       ('in_progress', 'В процессе'),
                       ('done', 'Сделано')]
 
-
+    content = models.TextField(max_length=1000, null=True, blank=True, verbose_name='Содержание задачи')
     description = models.CharField(max_length=200, null=False, blank=False, verbose_name='Описание задачи')
     status = models.CharField(max_length=50, choices=status_choices, default='new', verbose_name='Text')
     deadline = models.DateField(blank=True, default=None)
+
 
     def __str__(self):
         return f'{self.description} {self.status}'
